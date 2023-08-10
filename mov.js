@@ -11,10 +11,16 @@ function movieSearch() {
         dir=arrayMovie.Director
         act=arrayMovie.Actors
         writer=arrayMovie.Writer
-        result.innerHTML = `<div class="col-md-4"><h2>${title}</h2><img src="${poster}" alt=""></div>
-        <div class="col-md-8 mt-5"><p>Summary:${plot}</p> <p>Director:${dir}</p><p>Writer:${writer}</p>
-        <p>Actors:${act}</p><p>Released Date:${date}</p>
-        <p>Genre:${genre}</p></div>`
+        rate=arrayMovie.imdbRating
+        if(arrayMovie.Response=="False"||title=="Undefined"){
+            alert("Movie not found")}
+        else{
+           
+            result.innerHTML = `<div class="col-md-4"><h2 class="mt-3 mb-3">${title}</h2><img src="${poster}" alt=""></div>
+            <div class="col-md-8 mt-5"><p><span>Summary: </span>${plot}</p> <p><span>Director: </span>${dir}</p><p><span>Writer:</span>${writer}</p>
+             <p><span>Genre: </span>${genre}</p><p><span>IMDB Rating: </span>${rate}</p></div>`
+        }
+        }
+      
 
     }
-}
