@@ -1,6 +1,6 @@
 function movieSearch() {
     movie = movie.value
-    fetch(`http://www.omdbapi.com/?apikey=222e9039&t=${movie}`).then(data => data.json()).then(movie => displayMovie(movie))
+    fetch(`https://www.omdbapi.com/?t=${encodeURIComponent(movie)}&apikey=e57c2b8c`).then(data => data.json()).then(movie => displayMovie(movie))
     function displayMovie(arrayMovie) {
         console.log(arrayMovie);
         title = arrayMovie.Title
