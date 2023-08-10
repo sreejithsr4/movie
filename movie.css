@@ -1,0 +1,15 @@
+body{
+    background-image: url(./image/wp10021077-cinema-hall-wallpapers.jpg);
+   
+    object-fit: cover;
+    
+
+    z-index: -1; 
+}
+.row{
+    background-color: rgba(240, 248, 255, 0.705);
+}
+img{
+    align-items: center;
+    width: 100%;
+}
